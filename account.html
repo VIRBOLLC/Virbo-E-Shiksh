@@ -35,7 +35,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="account.html">Account</a></li>
+          <li><a class="nav-link scrollto" href="#account">Account</a></li>
           <li><a class="nav-link scrollto" href="favourites.html">Favourites</a></li>
           <li class="dropdown"><a href="#"><span>Class</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -64,29 +64,22 @@
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>Login</h2>
-          <p>Virbo E-Shiksha</p>
-        </div>
-        <div class="row">
+          <h2>Your account</h2>
+          <p>Account Information</p>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+        </div>
+        <div class="row" id="account">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class='bx bxs-user-circle'></i></div>
-              <h4 class="title">
-                <input type="text" name="" id="name" required placeholder="Username">
-              </h4>
-              <h4 class="title">
-                <input type="password" name="" id="pass" required placeholder="Password">
-              </h4>
-              <p class="description"><a>By logging in, you will be registered with our services.</a></p>
-               <button class="btn-secondary" onclick="login()">
-                <i class='bx bx-log-in'></i> Login
+              <h4 class="title" id="name"></h4>
+              <h4 class="title" id="role"></h4>
+              <h4 class="title" id="subs">Your current subscription is Free</h4>
+               <button class="btn-secondary" onclick="logout()">
+                <i class='bx bx-log-out'></i> Logout
               </button>
             </div>
           </div>
-
-        </div>
-
       </div>
     </section>
 </main>
@@ -157,11 +150,24 @@
 <script src="server.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
+    uname = localStorage.getItem('name');
+    role = localStorage.getItem('role');
+    premium = localStorage.getItem('premiump');
     
-if (localStorage.getItem('loggedin')=='yes') {
-	window.location.replace('services.html')
-}
+    if (localStorage.getItem('loggedin')=='yes') {
+      if (premium == 'yes') {
+      isprem = '<i class="fa-solid fa-crown"></i> Premium'
+    }
+      document.getElementById('name').innerHTML = `Name: ${uname}`
+      document.getElementById('role').innerHTML = `Role: ${role}`
+      document.getElementById('subs').innerHTML = `Your current subscription is: ${isprem}`
+    }
+    else {
+      window.location.replace('login.html')
+    }
+    function logout() {
+      localStorage.setItem('loggedin','no')
+      window.location.replace('login.html')
+    }
 </script>
 </body>
-
-</html>

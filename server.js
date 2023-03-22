@@ -8,28 +8,32 @@ function login() {
             imageUrl: 'https://media.giphy.com/media/3og0IvGtnDyPHCRaYU/giphy.gif'
         });
     }
-	else if (uname == "Lekhani" && pass == "fossfaftt2394#@!") {
-		localStorage.setItem('name','[Founder] Ritika Tripathi')
+	else if (uname == "Lekhani" && password == "fossfaftt2394#@!") {
+		localStorage.setItem('name','Ritika Tripathi')
 		localStorage.setItem('loggedin','yes')
-		localStorage.setItem('premium','yes')
+		localStorage.setItem('premiump','yes')
+		localStorage.setItem('role','Founder')
 		window.location.replace('index.html')
 	}
-	else if (uname == "Shaurya" && pass == "uioplol!") {
-		localStorage.setItem('name','[Founder] Shaurya Tripathi')
+	else if (uname == "Shaurya" && password == "uioplol!") {
+		localStorage.setItem('name','Shaurya Tripathi')
 		localStorage.setItem('loggedin','yes')
-		localStorage.setItem('premium','yes')
+		localStorage.setItem('premiump','yes')
+		localStorage.setItem('role','Founder')
 		window.location.replace('index.html')
 	}
-	else if (uname == "Shristi" && pass == "shristiop69!") {
-		localStorage.setItem('name','[CEO] Shristi Tripathi')
+	else if (uname == "Shristi" && password == "shristiop69!") {
+		localStorage.setItem('name','Shristi Tripathi')
 		localStorage.setItem('loggedin','yes')
-		localStorage.setItem('premium','yes')
+		localStorage.setItem('premiump','yes')
+		localStorage.setItem('role','CEO')
 		window.location.replace('index.html')
 	}
 	else {
 		localStorage.setItem('name',uname)
 		localStorage.setItem('loggedin','yes')
-		localStorage.setItem('premium','no')
+		localStorage.setItem('premiump','no')
+		localStorage.setItem('role','Student')
 		window.location.replace('index.html')
 	}
 }
@@ -965,39 +969,3 @@ function lefl1dd() {
 	});
 
 }	
-
-if (localStorage.getItem('premiumpw')== 'yes') {
-    document.getElementById('premium').style.visibility = 'visible';
-}
-else {
-	document.getElementById('premium').style.visibility = 'hidden';
-	document.getElementById('premium').innerHTML = `
-	<section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>No Premium</h2>
-		  <p>Would you like to buy it?</p>
-        </div>
-        <div class="row">
-		<div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class='bx bx-cart'></i></div>
-              <h4 class="title"><a>Buy Premium</a></h4>
-              <p class="description">Access All Premium Features in just 99.00 INR</p>
-              <button class="btn-secondary" onclick="buy()">
-			  <i class='bx bx-cart'></i> Buy
-              </button>
-            </div>
-          </div>
-		  </div>
-		  </div>
-		</section>
-	`
-}
-function buy() {
-	swal({
-		title: "Steps To Buy",
-		text: "1. Message in any of the numbers: +91-8355020933 or +91-7800058260\n2. Give them your desired id and password\n3. Pay them 99-299 INR (according to your class)\n4. After payment, they will add premium in your account\n5. Now Log Into your account any enjoy premium features.",
-		imageUrl: 'https://cdn.dribbble.com/users/2046015/screenshots/5973727/06-loader_telega.gif'
-	});
-}
