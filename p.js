@@ -1,9 +1,9 @@
 
-if (localStorage.getItem('prm')== 'yes') {
-    document.getElementById('premium').style.visibility = 'visible';
+if (localStorage.getItem('prm') == 'yes') {
+    document.getElementById('premium').style.visibility = 'visible'
 }
-else {
-	document.getElementById('premium').style.visibility = 'hidden';
+else if (localStorage.getItem('prm') == 'yes') {
+	document.getElementById('premium').style.visibility = 'hidden'
 	document.getElementById('main').innerHTML = `
 	<section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
