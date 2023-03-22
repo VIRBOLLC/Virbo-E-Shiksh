@@ -12,7 +12,7 @@ function login() {
 	else if (uname == "Ritika" && password == "54321nidhi!") {
 		localStorage.setItem('name','<i class="fa-solid fa-badge-check"></i> Ritika Tripathi')
 		localStorage.setItem('loggedin','yes')
-		localStorage.setItem('premiump','yes')
+		localStorage.setItem('prm','yes')
 		localStorage.setItem('role','Founder')
 		swal({
 			title: "Hey our Founder Ritika Tripathi!",
@@ -26,7 +26,7 @@ function login() {
 	else if (uname == "Shaurya" && password == "uioplol!") {
 		localStorage.setItem('name','<i class="fa-solid fa-badge-check"></i> Shaurya Tripathi')
 		localStorage.setItem('loggedin','yes')
-		localStorage.setItem('premiump','yes')
+		localStorage.setItem('prm','yes')
 		localStorage.setItem('role','Founder')
 		swal({
 			title: "Hey our Founder Shaurya Tripathi!",
@@ -40,7 +40,7 @@ function login() {
 	else if (uname == "Shristi" && password == "shristiop69!") {
 		localStorage.setItem('name','<i class="fa-solid fa-badge-check"></i> Shristi Tripathi')
 		localStorage.setItem('loggedin','yes')
-		localStorage.setItem('premiump','yes')
+		localStorage.setItem('prm','yes')
 		localStorage.setItem('role','CEO')
 		swal({
 			title: "Hey our CEO Shristi Tripathi!",
@@ -54,7 +54,7 @@ function login() {
 	else {
 		localStorage.setItem('name',uname)
 		localStorage.setItem('loggedin','yes')
-		localStorage.setItem('premiump','no')
+		localStorage.setItem('prm','no')
 		localStorage.setItem('role','Student')
 		swal({
 			title: "Hey Dear "+uname+"!",
