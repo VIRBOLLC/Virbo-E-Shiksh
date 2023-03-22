@@ -8,6 +8,24 @@ function login() {
             imageUrl: 'https://media.giphy.com/media/3og0IvGtnDyPHCRaYU/giphy.gif'
         });
     }
+	else if (uname == "Lekhani" && pass == "fossfaftt2394#@!") {
+		localStorage.setItem('name','[Founder] Ritika Tripathi')
+		localStorage.setItem('loggedin','yes')
+		localStorage.setItem('premium','yes')
+		window.location.replace('index.html')
+	}
+	else if (uname == "Shaurya" && pass == "uioplol!") {
+		localStorage.setItem('name','[Founder] Shaurya Tripathi')
+		localStorage.setItem('loggedin','yes')
+		localStorage.setItem('premium','yes')
+		window.location.replace('index.html')
+	}
+	else if (uname == "Shristi" && pass == "shristiop69!") {
+		localStorage.setItem('name','[CEO] Shristi Tripathi')
+		localStorage.setItem('loggedin','yes')
+		localStorage.setItem('premium','yes')
+		window.location.replace('index.html')
+	}
 	else {
 		localStorage.setItem('name',uname)
 		localStorage.setItem('loggedin','yes')
