@@ -1,3 +1,4 @@
+
 function login() {
     uname = document.getElementById('name').value;
     password = document.getElementById('pass').value;
@@ -8,33 +9,63 @@ function login() {
             imageUrl: 'https://media.giphy.com/media/3og0IvGtnDyPHCRaYU/giphy.gif'
         });
     }
-	else if (uname == "Lekhani" && password == "fossfaftt2394#@!") {
-		localStorage.setItem('name','Ritika Tripathi')
+	else if (uname == "Ritika" && password == "54321nidhi!") {
+		localStorage.setItem('name','<i class="fa-solid fa-badge-check"></i> Ritika Tripathi')
 		localStorage.setItem('loggedin','yes')
 		localStorage.setItem('premiump','yes')
 		localStorage.setItem('role','Founder')
-		window.location.replace('index.html')
+		swal({
+			title: "Hey our Founder Ritika Tripathi!",
+			text: "Thank you Dear Founder Ritika Tripathi for logging in!",
+			imageUrl: 'https://cdn.dribbble.com/users/778626/screenshots/5064153/verify.gif'
+		});
+		setTimeout(() => {
+			window.location.replace('index.html');
+		  }, 2000);
 	}
 	else if (uname == "Shaurya" && password == "uioplol!") {
-		localStorage.setItem('name','Shaurya Tripathi')
+		localStorage.setItem('name','<i class="fa-solid fa-badge-check"></i> Shaurya Tripathi')
 		localStorage.setItem('loggedin','yes')
 		localStorage.setItem('premiump','yes')
 		localStorage.setItem('role','Founder')
-		window.location.replace('index.html')
+		swal({
+			title: "Hey our Founder Shaurya Tripathi!",
+			text: "Thank you Dear Founder Shaurya Tripathi for logging in!",
+			imageUrl: 'https://cdn.dribbble.com/users/778626/screenshots/5064153/verify.gif'
+		});
+		setTimeout(() => {
+			window.location.replace('index.html');
+		  }, 2000);
 	}
 	else if (uname == "Shristi" && password == "shristiop69!") {
-		localStorage.setItem('name','Shristi Tripathi')
+		localStorage.setItem('name','<i class="fa-solid fa-badge-check"></i> Shristi Tripathi')
 		localStorage.setItem('loggedin','yes')
 		localStorage.setItem('premiump','yes')
 		localStorage.setItem('role','CEO')
-		window.location.replace('index.html')
+		swal({
+			title: "Hey our CEO Shristi Tripathi!",
+			text: "Thank you Dear CEO Shristi Tripathi for logging in!",
+			imageUrl: 'https://cdn.dribbble.com/users/778626/screenshots/5064153/verify.gif'
+		});
+		setTimeout(() => {
+			window.location.replace('index.html');
+		  }, 2000);
 	}
 	else {
 		localStorage.setItem('name',uname)
 		localStorage.setItem('loggedin','yes')
 		localStorage.setItem('premiump','no')
 		localStorage.setItem('role','Student')
-		window.location.replace('index.html')
+		swal({
+			title: "Hey Dear "+uname+"!",
+			text: "Thank you Dear "+uname+" for logging in our services!",
+			imageUrl: 'https://i.pinimg.com/originals/df/ea/dd/dfeaddf703acf71277dbb1d6d81479b0.gif'
+		})
+		setTimeout(() => {
+			window.location.replace('index.html');
+		  }, 2000);
+		
+		
 	}
 }
 function np(){
@@ -969,3 +1000,4 @@ function lefl1dd() {
 	});
 
 }	
+
