@@ -1,5 +1,5 @@
 
-if (localStorage.getItem('premiump')== 'yes') {
+if (localStorage.getItem('prm')== 'yes') {
     document.getElementById('premium').style.visibility = 'visible';
 }
 else {
