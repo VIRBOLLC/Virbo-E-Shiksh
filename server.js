@@ -3,7 +3,7 @@ function login() {
     uname = document.getElementById('name').value;
     password = document.getElementById('pass').value;
     if (uname == "" || password == "") {
-        swal({
+        swal({ 
             title: "Insufficient Information",
             text: "You have to fill all the fields",
             imageUrl: 'https://media.giphy.com/media/3og0IvGtnDyPHCRaYU/giphy.gif'
