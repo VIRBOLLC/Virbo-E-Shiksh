@@ -1,9 +1,9 @@
 
-if (localStorage.getItem('prm') == 'yes') {
-    document.getElementById('premium').style.visibility = 'visible'
+if (localStorage.getItem('prm')== 'yes') {
+    document.getElementById('premium').style.visibility = 'visible';
 }
-else if (localStorage.getItem('prm') == 'yes') {
-	document.getElementById('premium').style.visibility = 'hidden'
+else {
+	document.getElementById('premium').style.visibility = 'hidden';
 	document.getElementById('main').innerHTML = `
 	<section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
@@ -33,4 +33,7 @@ function buy() {
 		text: "1. Message in any of the numbers: +91-8355020933 or +91-7800058260\n2. Give them your desired id and password\n3. Pay them 99-299 INR (according to your class)\n4. After payment, they will add premium in your account\n5. Now Log Into your account any enjoy premium features.",
 		imageUrl: 'https://cdn.dribbble.com/users/2046015/screenshots/5973727/06-loader_telega.gif'
 	});
+}
+if (localStorage.getItem('loggedin') != 'yes') {
+	window.location.replace('index.html')
 }
